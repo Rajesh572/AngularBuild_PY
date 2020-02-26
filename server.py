@@ -8,6 +8,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
             self.path == "/"
             or self.path == "/dashboard"
             or self.path == "/reports/select"
+            or self.path == "/reports/favourite"
         ):
             self.path = "index.html"
         return http.server.SimpleHTTPRequestHandler.do_GET(self)
